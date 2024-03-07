@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'popins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    background: #36474f;
+
+}
+
+header {
+    position: absolute;
+    width: 90%;
+    height: 30px;
+    background: transparent;
+    padding: 0 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+    /* margin: 10px 15px 3px 2px; */
+}
+
+header .logo {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 30px 10px ;
+
+}
+
+header ul {
+    flex: 1;
+    text-align: right;
+}
+
+header ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+header ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+header ul li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    margin: auto;
+    display: block;
+    transition: 0.5s;
+}
+header ul li a:hover::after{
+    width: 100%;
+}
+
+#main{
+    display: flex; /* if we don't do this then the right div will come under the main div */
+    width: 100%;
+    height: 100%; 
+}
+#left{
+    position: absolute;     /* if we don't do this then the (#left #text-center) div will not come in the center of the left div */
+    width: 50%;
+    height: 100%;
+}
+.vertical-line1{
+    position: absolute;
+    display: flex;
+    width: 5px;
+    height: 8%;
+    background: rgb(110, 14, 200);
+    margin-top: 200px;
+    margin-left: 10px;
+    transform: rotate(-45deg);
+}
+.vertical-line2{
+    position: absolute;
+    display: flex;
+    width: 5px;
+    height: 8%;
+    background: rgb(110, 14, 200);
+    margin-top: 225px;
+    margin-left: 10px;
+    transform: rotate(-45deg);
+}
+.vertical-line3{
+    position: absolute;
+    display: flex;
+    width: 5px;
+    height: 8%;
+    background: rgb(110, 14, 200);
+    margin-top: 250px;
+    margin-left: 10px;
+    transform: rotate(-45deg);
+}
+.vertical-line4{
+    position: absolute;
+    display: flex;
+    width: 5px;
+    height: 8%;
+    background: rgb(110, 14, 200);
+    margin-top: 275px;
+    margin-left: 10px;
+    transform: rotate(-45deg);
+}
+.vertical-line5{
+    position: absolute;
+    display: flex;
+    width: 5px;
+    height: 8%;
+    background: rgb(110, 14, 200);
+    margin-top: 300px;
+    margin-left: 10px;
+    transform: rotate(-45deg);
+}
+#left-top{
+    position: relative;
+    display: flex;
+}
+#left-top h3{
+    position: absolute;
+    display: flex;
+    font-size: 25px;
+    font-weight: 100;
+    margin-top: 115px;
+    margin-left: 200px;
+    text-transform: uppercase;
+    color: #8f7f7f;
+}
+.animate-pop-in{
+    animation: pop-in 2s  cubic-bezier(0, .9, .3, 1.2) forwards;
+    opacity: 0;
+    animation-iteration-count: infinite;
+}
+#left-top h1{
+    position: absolute;
+    display: flex;
+    font-size: 60px;
+    font-weight: 600;
+    margin-top: 150px;
+    margin-left: 200px;
+    margin-bottom: 20px;
+    color: #f1ebebc3;
+}
+#left-bottom{
+    position: relative;
+    display: flex;
+    width: 40%;
+    margin-top: 200px;
+    margin-left: 200px;
+}
+#left-bottom p{
+    position: absolute;
+    display: flex;
+    color: #baaeae;
+    margin-top: 100px;
+    border-left: 2px solid rgb(159, 114, 131);
+    padding-left: 20px;
+}
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 16px;
+    font-weight: 5900;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    margin-top: 250px;
+}
+
+.hero-btn:hover {
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+    font-size: 23px;
+}
+
+.red-btn {
+    border: 1px solid #f44336;
+    border-radius: 20px;
+    background: transparent;
+    color: #f44336;
+}
+
+.red-btn:hover {
+    color: #fff;
+}
+#right{
+    width: 50%;
+    height: 100%;
+}
+#right img{
+    height: 60%;
+    margin-top: 20px;
+    margin-left: 300px;
+}
+#right img{
+    width: 375px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-25%, -50%);
+    padding: 8px;
+    background: linear-gradient(250deg, rgb(187, 198, 150), rgba(138, 138, 253, 0.415) 50%, transparent 50%);
+    background-size: 250%;
+    background-position: 100% 100%;
+    transition: background 1s;
+}
+#right img:hover{
+    background-position: 0% 0%;
+}
+.contact{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.c-left{
+    position: absolute;
+    display: flex;
+    width: 50%;
+    height: 80%;
+    background-color: transparent;
+    margin-top: 680px;
+    margin-left: 10px;
+}
+#contact{
+    position: relative;
+  }
+  
+  #contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 33px;
+  }
+  #contact-box input,
+  #contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 12px;
+    font-size: 1.1rem;
+  }
+  .contact h1 {
+    margin-left: 180px;
+    color: aqua;
+  }
+  #contact-box form{
+    width: 100%;
+    padding-left: 50px;
+  }
+  #contact-box label{
+    color: #efe1e1;
+    font-size: 1.3rem;
+    font-family: 'Crimson Pro', serif;
+  }
+  .contact button {
+    position: absolute;
+    margin: 15px auto;
+   display: block;
+   width: 56%;
+   border: 1px solid rgb(127, 125, 126);
+   border-radius: 20px;
+   font-size: 20px;
+   margin-top: 530px;
+}
+
+.btn:hover {
+    background-color: rgb(52, 53, 53);
+    cursor: pointer;
+    color: #efe1e1;
+}
+.c-right{
+    position: absolute;
+    display: flex;
+    width: 50%;
+    height: 80%;
+    background-color: transparent;
+    margin-top: 620px;
+    margin-left: 770px;
+    margin-right: 10px;
+}
+.services{margin-top: 130px;
+    margin-left: 120px;}
+.c-right h2{
+    margin-top: 60px;
+    color: #a8f204;
+    font-size: 26px;
+    font-weight: 600;
+    margin-left: 30px;
+}
+.c-right ul{
+    margin-top: 10px;
+}
+.c-right ul li{
+    color: #e2cece;
+    font-size: 20px;
+}
+.services button{
+    margin-top: 40px;
+    inline-size: 170px;
+    background: none;
+    color: white;
+    padding: 5px 8px;
+    border: 1px solid skyblue;
+    margin-left: 30px;
+    }
+    .sbtn:hover{
+        color: rgb(233, 243, 126);
+        cursor: pointer;
+        border: 1px solid red;
+    }
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 1200px;
+}
+
+footer h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: whitesmoke;
+}
+footer p{
+    font-size: 16px;
+    color: rgb(168, 134, 145);
+    text-align: center;
+    padding: 2px 80px;
+}
+
+.icons {
+    color: white;
+    padding: 10px;
+}
+footer .heart{
+    color: black;
+}
+@keyframes pop-in{          /* pop-in means dancing */
+    0%{
+        opacity: 0;
+        transform: translateY(-4rem) scale(.8);
+    }
+    100%{
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
